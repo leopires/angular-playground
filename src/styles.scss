@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+ul, li, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {;
+  list-style: none;
+}
+
+.page-header {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.component-name {
+  padding: 1rem 0;
+}

@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="component-name">
+        <h6>Loaded Component: {{this.name}}</h6>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <nav class="navbar navbar-light bg-primary list-title">
+        <h3>{{this.data?.listTitle}}</h3>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <ul *ngIf="(this.data) && ((this.data.items) && (this.data.items.length > 0)); else noItemsBlock"
+          class="list-group">
+        <li *ngFor="let item of this.data.items" class="list-group-item">
+          <div class="row">
+            <div class="col-9">
+              <div *ngIf="item.title" class="item-title">
+                {{item.title}}
+              </div>
+              <div *ngIf="item.description" class="item-description">
+                <p>{{item.description}}</p>
+              </div>
+            </div>
+            <div class="col-3">
+              <div *ngIf="item.image" class="item-image">
+                <img class="img-fluid" src="{{item.image}}" alt="{{item.title}} picture.">
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<ng-template #noItemsBlock>
+  <ul class="list-group">
+    <li class="list-group-item">{{this.data?.onEmptyListMessage}}</li>
+  </ul>
+</ng-template>

@@ -1,0 +1,26 @@
+.list-title {
+  border-radius: 20px 20px 0 0;
+  padding: 1rem 2rem;
+  h3 {
+    color: #FFF;
+  }
+}
+
+.item-title {
+  font: {
+    size: 1.5rem;
+    weight: 700;
+  }
+  margin-bottom: 1rem;
+}
+
+.item-description {
+  text-align: justify;
+}
+
+.item-image {
+  text-align: center;
+  img {
+    max-width: 180px;
+  }
+}
