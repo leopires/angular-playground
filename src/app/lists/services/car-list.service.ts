@@ -1,24 +1,24 @@
 import {Injectable} from '@angular/core';
-import {ListDataFetcherService} from "../../shared-components/list-display/list-data-fetcher.service-interface";
 import {Observable} from "rxjs";
-import {BasicListData, BasicListItem} from "../../shared-components/list-display/generict-list-dto";
 import {CarService} from "../../services/car.service";
+import {GenericListData, GenericListItem} from "../../shared-components/generic-list/generic-list.models";
+import {AbstractGenericListDataFetcher} from "../../shared-components/generic-list/abstract-generic-list-data-fetcher";
 
 @Injectable({
   providedIn: 'root'
 })
-export class CarListService extends ListDataFetcherService {
+export class CarListService extends AbstractGenericListDataFetcher {
 
   constructor(private carService: CarService) {
     super();
   }
 
-  fetchData(): Observable<BasicListData> {
-    return new Observable<BasicListData>(subscriber => {
+  fetchData(): Observable<GenericListData> {
+    return new Observable<GenericListData>(subscriber => {
       this.carService.getCarsList().subscribe((value) => {
-        let items: BasicListItem[] = []
+        let items: GenericListItem[] = []
         value.forEach((car) => {
-          let item: BasicListItem = {
+          let item: GenericListItem = {
             id: car.id,
             title: car.name,
             description: car.description,
@@ -26,12 +26,12 @@ export class CarListService extends ListDataFetcherService {
           }
           items.push(item);
         })
-        let basicListData: BasicListData = {
-          listTitle: "Cars List",
+        let listData: GenericListData = {
+          title: "Cars List",
           onEmptyListMessage: "Sorry but there is no cars to list right now.",
           items: items
         }
-        subscriber.next(basicListData);
+        subscriber.next(listData);
       })
     });
   }

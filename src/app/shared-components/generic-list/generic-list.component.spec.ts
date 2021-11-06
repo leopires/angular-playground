@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListDisplayComponent } from './list-display.component';
+import { GenericListComponent } from './generic-list.component';
 
 describe('ListDisplayComponent', () => {
-  let component: ListDisplayComponent;
-  let fixture: ComponentFixture<ListDisplayComponent>;
+  let component: GenericListComponent;
+  let fixture: ComponentFixture<GenericListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListDisplayComponent ]
+      declarations: [ GenericListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListDisplayComponent);
+    fixture = TestBed.createComponent(GenericListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

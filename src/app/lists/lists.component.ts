@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 import {getClassName} from "../helpers/object-helpers";
 
 @Component({
@@ -9,6 +9,7 @@ import {getClassName} from "../helpers/object-helpers";
 export class ListsComponent {
 
   public readonly name: string;
+
 
   constructor() {
     this.name = getClassName(this);
