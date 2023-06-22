@@ -2,13 +2,13 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {GenericListItem} from "../generic-list.models";
 
 @Component({
-  selector: 'generic-list-item',
+  selector: 'app-generic-list-item',
   templateUrl: './generic-list-item.component.html',
   styleUrls: ['./generic-list-item.component.scss']
 })
 export class GenericListItemComponent {
 
-  @Input('item')
+  @Input()
   data: GenericListItem | undefined;
 
   @Output()

@@ -3,10 +3,9 @@ import {GenericListData, GenericListItem} from "./generic-list.models";
 import {Observable, Subscription} from "rxjs";
 import {getClassName} from "../../helpers/object-helpers";
 import {AbstractGenericListDataFetcher} from "./abstract-generic-list-data-fetcher";
-import {GenericListItemComponent} from "./generic-list-item/generic-list-item.component";
 
 @Component({
-  selector: 'generic-list',
+  selector: 'app-generic-list',
   templateUrl: './generic-list.component.html',
   styleUrls: ['./generic-list.component.scss']
 })
@@ -18,7 +17,7 @@ export class GenericListComponent implements OnInit, OnDestroy {
 
   public readonly name: string;
 
-  @Output('onSelectedItem')
+  @Output()
   selectedItem: EventEmitter<GenericListItem> = new EventEmitter<GenericListItem>();
 
   constructor(private genericListDataFetcherService: AbstractGenericListDataFetcher) {
