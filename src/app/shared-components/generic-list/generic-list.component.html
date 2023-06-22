@@ -17,7 +17,7 @@
     <div class="col-12">
       <div *ngIf="((this.data) && ((this.data.items) && (this.data.items.length > 0))); else noItemsBlock"
           class="list-group">
-        <app-generic-list-item *ngFor="let item of this.data.items" [item]="item" (selectedItem)="getSelectedItem($event)"></app-generic-list-item>
+        <app-generic-list-item *ngFor="let item of this.data.items" [data]="item" (selectedItem)="getSelectedItem($event)"></app-generic-list-item>
       </div>
     </div>
   </div>
