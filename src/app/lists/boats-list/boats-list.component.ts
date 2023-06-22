@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {getClassName} from "../../helpers/object-helpers";
-import {ListDataFetcherService} from "../../shared-components/list-display/list-data-fetcher.service-interface";
 import {BoatListService} from "../services/boat-list.service";
+import {AbstractGenericListDataFetcher} from "../../shared-components/generic-list/abstract-generic-list-data-fetcher";
 
 @Component({
   selector: 'app-boats-list',
@@ -9,7 +9,7 @@ import {BoatListService} from "../services/boat-list.service";
   styleUrls: ['./boats-list.component.scss'],
   providers: [
     {
-      provide: ListDataFetcherService,
+      provide: AbstractGenericListDataFetcher,
       useClass: BoatListService
     }
   ]

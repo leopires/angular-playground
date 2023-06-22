@@ -1,0 +1,17 @@
+<div class="list-group-item" (click)="selectItem()">
+  <div class="row">
+    <div class="col-9">
+      <div class="item-title">
+        {{data?.title}}
+      </div>
+      <div *ngIf="data?.description" class="item-description">
+        <p>{{data?.description}}</p>
+      </div>
+    </div>
+    <div class="col-3 d-flex flex-column flex-nowrap justify-content-center">
+      <div *ngIf="data?.image" class="item-image">
+        <img class="img-fluid" src="{{data?.image}}" alt="{{data?.title}}">
+      </div>
+    </div>
+  </div>
+</div>
