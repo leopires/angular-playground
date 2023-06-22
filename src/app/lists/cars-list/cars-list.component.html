@@ -1,10 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="component-name">
-      <h5>Loaded Component: {{this.name}}</h5>
+      <h5>Loaded Component: {{ this.name }}</h5>
     </div>
   </div>
   <div class="row">
-    <app-generic-list (selectedItem)="onListSelectedItem($event)"></app-generic-list>
+    <app-generic-list
+      (selectedItem)="onListSelectedItem($event)"></app-generic-list>
   </div>
 </div>

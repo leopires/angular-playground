@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import {BoatModel} from "./models/boat.model";
-import {Observable, of} from "rxjs";
+import { BoatModel } from './models/boat.model';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BoatService {
-
   private readonly boats: BoatModel[];
 
   constructor() {

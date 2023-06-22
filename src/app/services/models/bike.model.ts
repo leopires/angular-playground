@@ -1,5 +1,5 @@
 export interface BikeModel {
-  id: string,
-  name: string,
-  picture: string
+  id: string;
+  name: string;
+  picture: string;
 }

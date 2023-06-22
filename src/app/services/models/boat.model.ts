@@ -1,7 +1,7 @@
 export interface BoatModel {
-  id: string,
-  name: string,
-  year: number,
-  description: string,
-  picture: string
+  id: string;
+  name: string;
+  year: number;
+  description: string;
+  picture: string;
 }

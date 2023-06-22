@@ -8,9 +8,8 @@ describe('ListDisplayComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GenericListComponent ]
-    })
-    .compileComponents();
+      declarations: [GenericListComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

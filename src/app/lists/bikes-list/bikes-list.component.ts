@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
-import {BikeListService} from "../services/bike-list.service";
-import {getClassName} from "../../helpers/object-helpers";
-import {AbstractGenericListDataFetcher} from "../../shared-components/generic-list/abstract-generic-list-data-fetcher";
+import { Component } from '@angular/core';
+import { BikeListService } from '../services/bike-list.service';
+import { getClassName } from '../../helpers/object-helpers';
+import { AbstractGenericListDataFetcher } from '../../shared-components/generic-list/abstract-generic-list-data-fetcher';
 
 @Component({
   selector: 'app-bikes-list',
@@ -10,12 +10,11 @@ import {AbstractGenericListDataFetcher} from "../../shared-components/generic-li
   providers: [
     {
       provide: AbstractGenericListDataFetcher,
-      useClass: BikeListService
-    }
-  ]
+      useClass: BikeListService,
+    },
+  ],
 })
 export class BikesListComponent {
-
   public readonly name: string;
 
   constructor() {

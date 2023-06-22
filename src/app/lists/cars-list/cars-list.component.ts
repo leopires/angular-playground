@@ -1,8 +1,8 @@
-import {Component} from '@angular/core';
-import {CarListService} from "../services/car-list.service";
-import {getClassName} from "../../helpers/object-helpers";
-import {AbstractGenericListDataFetcher} from "../../shared-components/generic-list/abstract-generic-list-data-fetcher";
-import {GenericListItem} from "../../shared-components/generic-list/generic-list.models";
+import { Component } from '@angular/core';
+import { CarListService } from '../services/car-list.service';
+import { getClassName } from '../../helpers/object-helpers';
+import { AbstractGenericListDataFetcher } from '../../shared-components/generic-list/abstract-generic-list-data-fetcher';
+import { GenericListItem } from '../../shared-components/generic-list/generic-list.models';
 
 @Component({
   selector: 'app-cars-list',
@@ -11,12 +11,12 @@ import {GenericListItem} from "../../shared-components/generic-list/generic-list
   providers: [
     {
       provide: AbstractGenericListDataFetcher,
-      useClass: CarListService
-    }
-  ]
+      useClass: CarListService,
+    },
+  ],
 })
 export class CarsListComponent {
-  public readonly name: string
+  public readonly name: string;
 
   constructor() {
     this.name = getClassName(this);
